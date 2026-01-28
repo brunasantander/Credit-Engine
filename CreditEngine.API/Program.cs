@@ -1,3 +1,7 @@
+using CreditEngine.Domain.Repositories;
+using CreditEngine.Infrastructure.Repositories;
+using CreditEngine.Application.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +11,10 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<ICompanyRepository, InMemoryCompanyRepository>();
+builder.Services.AddScoped<CompanyService>();
+builder.Services.AddScoped<CreditEvaluationService>();
+builder.Services.AddScoped<ICreditDecisionRepository, InMemoryCreditDecisionRepository>();
 
 var app = builder.Build();
 
