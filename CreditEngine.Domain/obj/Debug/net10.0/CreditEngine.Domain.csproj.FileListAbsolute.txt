@@ -9,3 +9,4 @@
 /Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Domain/obj/Debug/net10.0/refint/CreditEngine.Domain.dll
 /Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Domain/obj/Debug/net10.0/CreditEngine.Domain.pdb
 /Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Domain/obj/Debug/net10.0/ref/CreditEngine.Domain.dll
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Domain/obj/Debug/net10.0/CreditEngine.Domain.sourcelink.json

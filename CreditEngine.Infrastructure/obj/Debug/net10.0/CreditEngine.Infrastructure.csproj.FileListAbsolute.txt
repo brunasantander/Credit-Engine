@@ -15,3 +15,4 @@
 /Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/refint/CreditEngine.Infrastructure.dll
 /Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/CreditEngine.Infrastructure.pdb
 /Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/ref/CreditEngine.Infrastructure.dll
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/CreditEngine.Infrastructure.sourcelink.json
