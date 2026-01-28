@@ -1,0 +1,15 @@
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/bin/Debug/net10.0/CreditEngine.Application.deps.json
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/bin/Debug/net10.0/CreditEngine.Application.dll
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/bin/Debug/net10.0/CreditEngine.Application.pdb
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/bin/Debug/net10.0/CreditEngine.Domain.dll
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/bin/Debug/net10.0/CreditEngine.Domain.pdb
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/obj/Debug/net10.0/CreditEngine.Application.csproj.AssemblyReference.cache
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/obj/Debug/net10.0/CreditEngine.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/obj/Debug/net10.0/CreditEngine.Application.AssemblyInfoInputs.cache
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/obj/Debug/net10.0/CreditEngine.Application.AssemblyInfo.cs
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/obj/Debug/net10.0/CreditEngine.Application.csproj.CoreCompileInputs.cache
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/obj/Debug/net10.0/CreditEn.84F99D94.Up2Date
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/obj/Debug/net10.0/CreditEngine.Application.dll
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/obj/Debug/net10.0/refint/CreditEngine.Application.dll
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/obj/Debug/net10.0/CreditEngine.Application.pdb
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Application/obj/Debug/net10.0/ref/CreditEngine.Application.dll

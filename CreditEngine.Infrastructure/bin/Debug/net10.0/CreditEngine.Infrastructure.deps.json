@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "CreditEngine.Infrastructure/1.0.0": {
+        "dependencies": {
+          "CreditEngine.Application": "1.0.0",
+          "CreditEngine.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CreditEngine.Infrastructure.dll": {}
+        }
+      },
+      "CreditEngine.Application/1.0.0": {
+        "dependencies": {
+          "CreditEngine.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CreditEngine.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CreditEngine.Domain/1.0.0": {
+        "runtime": {
+          "CreditEngine.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CreditEngine.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CreditEngine.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CreditEngine.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

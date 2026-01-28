@@ -1,0 +1,17 @@
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/bin/Debug/net10.0/CreditEngine.Infrastructure.deps.json
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/bin/Debug/net10.0/CreditEngine.Infrastructure.dll
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/bin/Debug/net10.0/CreditEngine.Infrastructure.pdb
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/bin/Debug/net10.0/CreditEngine.Application.dll
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/bin/Debug/net10.0/CreditEngine.Domain.dll
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/bin/Debug/net10.0/CreditEngine.Domain.pdb
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/bin/Debug/net10.0/CreditEngine.Application.pdb
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/CreditEngine.Infrastructure.csproj.AssemblyReference.cache
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/CreditEngine.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/CreditEngine.Infrastructure.AssemblyInfoInputs.cache
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/CreditEngine.Infrastructure.AssemblyInfo.cs
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/CreditEngine.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/CreditEn.9146A5BA.Up2Date
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/CreditEngine.Infrastructure.dll
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/refint/CreditEngine.Infrastructure.dll
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/CreditEngine.Infrastructure.pdb
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/ref/CreditEngine.Infrastructure.dll
