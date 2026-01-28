@@ -18,9 +18,11 @@ public class CreditEvaluationService
         _decisionRepository = decisionRepositpry;
     }
 
-    public async Task<CreditDecision> EvaluateAsync(Guid companyId)
+    public async Task<CreditDecision?> EvaluateAsync(Guid companyId)
     {
         var company = await _companyRepository.GetByIdAsync(companyId);
+        if (company is null)
+            return null;
         var leverage = company.Leverage();
 
         var approved = CreditPolicy.IsEligible(

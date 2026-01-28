@@ -1,6 +1,8 @@
 using CreditEngine.Domain.Repositories;
 using CreditEngine.Infrastructure.Repositories;
 using CreditEngine.Application.Services;
+using CreditEngine.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,10 +13,17 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<ICompanyRepository, InMemoryCompanyRepository>();
 builder.Services.AddScoped<CompanyService>();
 builder.Services.AddScoped<CreditEvaluationService>();
-builder.Services.AddScoped<ICreditDecisionRepository, InMemoryCreditDecisionRepository>();
+builder.Services.AddDbContext<CreditEngineDbContext>(options =>
+    options.UseNpgsql(
+        builder.Configuration.GetConnectionString("Postgres")
+    )
+);
+
+builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
+builder.Services.AddScoped<ICreditDecisionRepository, CreditDecisionRepository>();
+
 
 var app = builder.Build();
 

@@ -16,3 +16,5 @@
 /Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/CreditEngine.Infrastructure.pdb
 /Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/ref/CreditEngine.Infrastructure.dll
 /Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/CreditEngine.Infrastructure.sourcelink.json
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/bin/Debug/net10.0/CreditEngine.Infrastructure.runtimeconfig.json
+/Users/brunasantander/Documents/Bruna/credit-engine/CreditEngine.Infrastructure/obj/Debug/net10.0/CreditEngine.Infrastructure.genruntimeconfig.cache
