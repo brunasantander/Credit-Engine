@@ -62,6 +62,10 @@ public class CompanyService
         return company;
     }
 
+    public async Task<List<Company>> GetAllAsync()
+    {
+        return await _companyRepository.GetAllAsync();
+    }
     public async Task<Company> UpdateCompany(UpdateCompanyRequest request)
     {
         var company = await _companyRepository.GetByIdAsync(request.Id)

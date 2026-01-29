@@ -28,6 +28,11 @@ public class CompanyRepository : ICompanyRepository
         return await _context.Companies.FirstOrDefaultAsync(x => x.Cnpj == cnpj);
     }
 
+    public async Task<List<Company>> GetAllAsync()
+    {
+        return await _context.Companies.ToListAsync();
+    }
+
     public async Task UpdateAsync(Company company)
     {
         _context.Companies.Update(company);

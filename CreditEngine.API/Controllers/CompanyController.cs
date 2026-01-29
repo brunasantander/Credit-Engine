@@ -67,6 +67,13 @@ public class CompanyController : ControllerBase
         }
     }
 
+    [HttpGet]
+    public async Task<IActionResult> GetAll()
+    {
+        var companies = await _service.GetAllAsync();
+        return Ok(companies);
+    }
+
     [HttpPut]
     public async Task<IActionResult> UpdateCompany([FromBody] UpdateCompanyRequest request)
     {
