@@ -22,4 +22,9 @@ public class CompanyRepository : ICompanyRepository
         await _context.Companies.AddAsync(company);
         await _context.SaveChangesAsync();
     }
+
+    public async Task<Company?> GetByDocument(string cnpj)
+    {
+        return await _context.Companies.FirstOrDefaultAsync(x => x.Cnpj == cnpj);
+    }
 }

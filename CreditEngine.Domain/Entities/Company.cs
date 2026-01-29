@@ -19,6 +19,7 @@ public class Company
         decimal cash
     )
     {
+        Id = Guid.NewGuid();
         Cnpj = cnpj;
         AnnualRevenue = annualRevenue;
         Ebitda = ebitda;
