@@ -35,7 +35,7 @@ public class CompanyService
         if (cash < 0)
             throw new BusinessException("Cash não pode ser negativo");
 
-        var normalizedCnpj = new string(cnpj.Where(char.IsDigit).ToArray());
+        var normalizedCnpj = new string([.. cnpj.Where(char.IsDigit)]);
         var company = new Company(
             normalizedCnpj,
             annualRevenue,

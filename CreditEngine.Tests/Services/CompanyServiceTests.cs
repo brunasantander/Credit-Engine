@@ -149,6 +149,7 @@ public class CompanyServiceTests
         companyRepository.Verify(r => r.AddAsync(It.IsAny<Company>()), Times.Never);
     }
 
+    [Fact]
     public async Task CreateAsync_Should_Throw_When_cash_Is_Lower_Than_0()
     {
         // Arrange
@@ -175,4 +176,44 @@ public class CompanyServiceTests
         // Garantir que o repositório **não foi chamado**
         companyRepository.Verify(r => r.AddAsync(It.IsAny<Company>()), Times.Never);
     }
+
+    [Fact]
+    public async Task CreateAsync_Should_Throw_When_Company_Already_Exists()
+    {
+        // Arrange
+        var companyRepository = new Mock<ICompanyRepository>();
+
+        var existingCompany = new Company(
+            cnpj: "12.345.678/0001-90",
+            annualRevenue: 1_000_000,
+            ebitda: 500_000,
+            totalDebt: 100_000,
+            cash: 50_000
+        );
+
+        // Simula que a empresa já existe no repositório
+        companyRepository
+            .Setup(r => r.GetByDocument("12.345.678/0001-90"))
+            .ReturnsAsync(existingCompany);
+
+        var service = new CompanyService(companyRepository.Object);
+
+        // Act
+        Func<Task> act = async () => await service.CreateAsync(
+            cnpj: "12.345.678/0001-90",
+            annualRevenue: 6_000_000,
+            ebitda: 500_000,
+            totalDebt: 1_000_000,
+            cash: 200_000
+        );
+
+        // Assert
+        await act.Should()
+            .ThrowAsync<BusinessException>()
+            .WithMessage("Empresa já existe");
+
+        // Verifica que o AddAsync **não foi chamado**
+        companyRepository.Verify(r => r.AddAsync(It.IsAny<Company>()), Times.Never);
+    }
+
 }
