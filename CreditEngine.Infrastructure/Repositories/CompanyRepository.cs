@@ -27,4 +27,17 @@ public class CompanyRepository : ICompanyRepository
     {
         return await _context.Companies.FirstOrDefaultAsync(x => x.Cnpj == cnpj);
     }
+
+    public async Task UpdateAsync(Company company)
+    {
+        _context.Companies.Update(company);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task DeleteAsync(Guid id)
+    {
+        var company = await GetByIdAsync(id);
+        _context.Companies.Remove(company);
+        await _context.SaveChangesAsync();
+    }
 }

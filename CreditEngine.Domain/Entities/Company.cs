@@ -32,4 +32,23 @@ public class Company
         if (Ebitda <= 0) return decimal.MaxValue;
         return TotalDebt / Ebitda;
     }
+
+    public void Update(
+    decimal? annualRevenue,
+    decimal? ebitda,
+    decimal? totalDebt,
+    decimal? cash)
+    {
+        if (annualRevenue.HasValue)
+            AnnualRevenue = annualRevenue.Value;
+
+        if (ebitda.HasValue)
+            Ebitda = ebitda.Value;
+
+        if (totalDebt.HasValue)
+            TotalDebt = totalDebt.Value;
+
+        if (cash.HasValue)
+            Cash = cash.Value;
+    }
 }

@@ -67,4 +67,34 @@ public class CompanyController : ControllerBase
         }
     }
 
+    [HttpPut]
+    public async Task<IActionResult> UpdateCompany([FromBody] UpdateCompanyRequest request)
+    {
+        try
+        {
+            var company = await _service.UpdateCompany(request);
+
+            return Ok(company);
+        }
+        catch (BusinessException ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteCompany(Guid id)
+    {
+        try
+        {
+            await _service.DeleteCompany(id);
+
+            return Ok();
+        }
+        catch (BusinessException ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+    }
+
 }

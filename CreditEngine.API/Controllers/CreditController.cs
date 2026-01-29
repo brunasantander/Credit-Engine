@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using CreditEngine.Application.Services;
 using Microsoft.VisualBasic;
 using System.IO.Pipelines;
+using CreditEngine.Application.DTOs;
 
 namespace CreditEngine.API.Controllers;
 
@@ -17,7 +18,7 @@ public class CreditController : ControllerBase
     }
 
     [HttpPost("evaluate")]
-    public async Task<IActionResult> Evaluate([FromBody] CreditEvaluationRequestDto dto)
+    public async Task<IActionResult> Evaluate([FromBody] CreditEvaluationRequest dto)
     {
         var result = await _service.EvaluateAsync(dto.CompanyId);
         if (result is null) return NotFound("Company not found");

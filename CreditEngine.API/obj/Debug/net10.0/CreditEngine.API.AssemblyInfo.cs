@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CreditEngine.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64245521acc41402971165889d9641ac2bcd8eaf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ccf4465519a9dcc6d51de9f4d14ce05edd38bfc4")]
 [assembly: System.Reflection.AssemblyProductAttribute("CreditEngine.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CreditEngine.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

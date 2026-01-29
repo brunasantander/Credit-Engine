@@ -1,6 +1,7 @@
 using CreditEngine.Domain.Entities;
 using CreditEngine.Domain.Repositories;
 using CreditEngine.Domain.Rules;
+using CreditEngine.Application.DTOs;
 
 namespace CreditEngine.Application.Services;
 
@@ -20,10 +21,6 @@ public class CompanyService
         decimal totalDebt,
         decimal cash)
     {
-        var exists = await _companyRepository.GetByDocument(cnpj);
-
-        if (exists is not null) throw new BusinessException("Empresa já existe");
-
         if (string.IsNullOrWhiteSpace(cnpj))
             throw new BusinessException("CNPJ inválido");
         if (annualRevenue < 0)
@@ -34,6 +31,10 @@ public class CompanyService
             throw new BusinessException("Dívida total não pode ser negativa");
         if (cash < 0)
             throw new BusinessException("Cash não pode ser negativo");
+
+        var exists = await _companyRepository.GetByDocument(cnpj);
+
+        if (exists is not null) throw new BusinessException("Empresa já existe");
 
         var normalizedCnpj = new string([.. cnpj.Where(char.IsDigit)]);
         var company = new Company(
@@ -53,13 +54,36 @@ public class CompanyService
     {
         var company = await _companyRepository.GetByIdAsync(id) ?? throw new BusinessException("Empresa não existe");
         return company;
-
     }
 
     public async Task<Company> GetCompanyByDocument(string cnpj)
     {
         var company = await _companyRepository.GetByDocument(cnpj) ?? throw new BusinessException("Empresa não existe");
         return company;
+    }
 
+    public async Task<Company> UpdateCompany(UpdateCompanyRequest request)
+    {
+        var company = await _companyRepository.GetByIdAsync(request.Id)
+         ?? throw new BusinessException("Empresa não existe");
+
+        company.Update(
+            request.AnnualRevenue,
+            request.Ebitda,
+            request.TotalDebt,
+            request.Cash
+        );
+
+        await _companyRepository.UpdateAsync(company);
+
+        return company;
+    }
+
+    public async Task DeleteCompany(Guid id)
+    {
+        var exists = await _companyRepository.GetByIdAsync(id) ?? throw new BusinessException("Empresa não existe");
+        await _companyRepository.DeleteAsync(id);
+        exists = await _companyRepository.GetByIdAsync(id);
+        if (exists is not null) throw new BusinessException("Erro ao deletar empresa");
     }
 }
